@@ -12,7 +12,7 @@ exports.documentReady = function () {
     console.debug('documentReady', window.location.href);
 
     var $editbar = $('#editbar');
-    var $popups = $('#users, .popup');
+    var $popups = $('#users, .popup, .epEmbedFloatingToolbar');
 
     doPosition($editbar, $popups);
 };
@@ -28,7 +28,7 @@ exports.postTimesliderInit = function () {
     console.debug('postTimesliderInit', window.location.href);
 
     var $timeslider = $('#timeslider-top');
-    var $popups = $('.popup');
+    var $popups = $('.popup .epEmbedFloatingToolbar');
 
     doPosition($timeslider, $popups);
 };
