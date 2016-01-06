@@ -51,6 +51,11 @@ var doPosition = function ($toolbar, $popups) {
         if (msg.name = 'ep_embed_floating_toolbar_scroll') {
             var data = msg.data;
 
+            if (!data.scroll) {
+                console.warn('Dropping message, as data.scroll was not present');
+                return;
+            }
+            
             var diff = data.scroll.top - data.frameOffset.top;
             if (diff > 0) {
                 $toolbar.css('top', diff + 'px');
